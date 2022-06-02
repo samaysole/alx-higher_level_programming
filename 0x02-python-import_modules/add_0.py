@@ -1,3 +1,9 @@
 def add(a, b):
-    x, y = a, b
-    return (x + y)
+    """My addition function
+    Args:
+        a: first integer
+        b: second integer
+    Returns:
+        The return value. a + b
+    """
+    return (a + b)
