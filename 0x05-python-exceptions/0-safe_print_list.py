@@ -7,6 +7,6 @@ def safe_print_list(my_list=[], x=0):
         except:
             break
         else:
-            num +=1
+            num += 1
     print('')
-    return (num) 
+    return (num)
