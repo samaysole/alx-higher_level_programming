@@ -4,8 +4,9 @@ def safe_print_list(my_list=[], x=0):
     for index in range(x):
         try:
             print(my_list[index], end='')
-            num += 1
-        except Exception as error:
+        except:
             break
+        else:
+            num +=1
     print('')
-    return num 
+    return (num) 
