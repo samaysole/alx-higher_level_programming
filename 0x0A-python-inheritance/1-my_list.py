@@ -1,14 +1,12 @@
 #!/usr/bin/python3
-"""
-This module implements a custom list object
-"""
-
-
 class MyList(list):
-    """Custom List
+    """ Class that inherits the attributes references of class list
+    Args:
+        list: class list
     """
+
     def print_sorted(self):
-        """
-        prints the list, but sorted (ascending sort)
-        """
-        print(sorted(self))
+        """ Method that prints the sorted list """
+        l_sorted = self.copy()
+        l_sorted.sort()
+        print(l_sorted)
