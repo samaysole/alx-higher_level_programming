@@ -19,4 +19,4 @@ class Student:
                     d[k] = v
             return d
         else:
-            return self.
+            return self.__dict__
