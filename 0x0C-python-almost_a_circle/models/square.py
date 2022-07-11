@@ -34,3 +34,22 @@ class Square(Rectangle):
         x = self.x
         y = self.y
         return "[Square] ({}) {}/{} - {}".format(id, x, y, size)
+
+    def update(self, *args, **kwargs):
+        """update arguments"""
+        attr = ['id', 'size', 'x', 'y']
+        if args:
+            for at, numb in zip(attr, args):
+                setattr(self, at, numb)
+        elif kwargs:
+            for key, value in kwargs.items():
+                if key in attr:
+                    setattr(self, key, value)
+
+    def to_dictionary(self) -> dict:
+        """square to dictionary"""
+        id = self.id
+        size = self.__size
+        x = self.x
+        y = self.y
+        return {'id': id, 'x': x, 'size': size, 'y': y}
