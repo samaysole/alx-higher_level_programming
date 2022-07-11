@@ -56,3 +56,23 @@ class Rectangle(Base):
         """height getter
         """
         return self.__height
+   
+   @height.setter
+    def height(self, height: int):
+        """height setter
+        """
+        self.check_type_value('height', height)
+        self.__height = height
+
+    @property
+    def x(self) -> int:
+        """x getter
+        """
+        return self.__x
+
+    @x.setter
+    def x(self, x: int):
+        """x setter
+        """
+        self.check_type_value('x', x, True)
+        self.__x = x
