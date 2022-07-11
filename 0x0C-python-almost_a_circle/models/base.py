@@ -44,3 +44,21 @@ class Base:
                 text.append(lst.to_dictionary())
         with open(filename, mode="w", encoding="utf-8") as f:
             return f.write(Base.to_json_string(text))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """transform a JSON string representation `json_string` to a list"""
+        if json_string is None or len(json_string) == 0:
+            return []
+        else:
+            return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """create a new object from dictionary"""
+        if cls.__name__ == "Rectangle":
+            new = cls(10, 10)
+        elif cls.__name__ == "Square":
+            new = cls(10, 10)
+        new.update(**dictionary)
+        return new
