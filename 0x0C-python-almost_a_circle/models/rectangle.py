@@ -56,7 +56,7 @@ class Rectangle(Base):
         """height getter
         """
         return self.__height
-   
+ 
    @height.setter
     def height(self, height: int):
         """height setter
@@ -76,3 +76,48 @@ class Rectangle(Base):
         """
         self.check_type_value('x', x, True)
         self.__x = x
+
+    @property
+    def y(self) -> int:
+        """y getter
+        """
+        return self.__y
+
+    @y.setter
+    def y(self, y: int):
+        """y setter
+        """
+        self.check_type_value('y', y, True)
+        self.__y = y
+
+    def area(self) -> int:
+        """area
+        """
+        return self.width * self.height
+
+    def display(self):
+        """prints # shape of the rectangle
+        """
+        print('\n'*self.y, end='')
+        for l in range(self.height):
+            print(' '*self.x + '#'*self.width)
+
+    def update(self, *args, **kwargs):
+        """update rectangle attributes
+        """
+
+        expect = (self.id, self.width, self.height, self.x, self.y)
+        if args != ():
+            self.id, self.width, self.height, self.x, self.y = \
+                args + expect[len(args):len(expect)]
+        elif kwargs:
+            for (name, value) in kwargs.items():
+                setattr(self, name, value)
+
+    def to_dictionary(self) -> int:
+        """rectangle to dictionary
+        """
+
+        return {
+            'x': self.x, 'y': self.y, 'id': self.id,
+            'height': self.height, 'width': self.width}
