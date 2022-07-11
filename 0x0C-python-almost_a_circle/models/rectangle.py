@@ -37,3 +37,22 @@ class Rectangle(Base):
         else:
             if value < 0:
                 raise ValueError("{} must be >= 0".format(name))
+
+    @property
+    def width(self) -> int:
+        """width getter
+        """
+        return self.__width
+
+    @width.setter
+    def width(self, width: int):
+        """width setter
+        """
+        self.check_type_value('width', width)
+        self.__width = width
+
+    @property
+    def height(self) -> int:
+        """height getter
+        """
+        return self.__height
