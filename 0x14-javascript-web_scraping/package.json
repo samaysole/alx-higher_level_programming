@@ -1,0 +1,15 @@
+{
+  "name": "0x14-javascript-web_scraping",
+  "version": "1.0.0",
+  "description": "![JSWebScraping](https://user-images.githubusercontent.com/85625481/196458987-a03263ba-fd15-4da8-98d1-c63ac39e0a7d.jpeg)",
+  "main": "0-readme.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
